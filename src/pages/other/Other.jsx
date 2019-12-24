@@ -8,6 +8,7 @@ import Baike from './Baike'
 import University from './University'
 import Classify from './Classify'
 import Details from './details/Details'
+import DishDetails from './details/DishDetails'
 import CircleDetails from './details/CircleDetails'
 import LessonSeries from './LessonSeries'
 import { IndexWarp } from './styledOther'
@@ -57,6 +58,10 @@ class Other extends Component {
                     <Route
                         path='/other/circledetails/:id'
                         render={() => (<CircleDetails></CircleDetails>)}
+                    />
+                    <Route
+                        path='/other/dishDetails/:id'
+                        render={() => (<DishDetails></DishDetails>)}
                     />
                 </Switch>
             </IndexWarp>

@@ -227,10 +227,7 @@ background-color: #FFFFFF;
         }
          >:last-child{
             border-left:1px solid #E7E2E5;
-        }
-           
-
-      
+        }  
     }
 
 }

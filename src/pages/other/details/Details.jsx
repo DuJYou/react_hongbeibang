@@ -56,7 +56,7 @@ class Details extends Component {
     }
 
     render() {
-        console.log(this.state.detailsList.introduces);
+        // console.log(this.state.detailsList.introduces);
         
         return (
             <DetailsWarp>

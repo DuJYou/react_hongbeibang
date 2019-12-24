@@ -6,9 +6,11 @@ class Content extends Component {
     handleDetail=(contentId)=>()=>{
         this.props.history.push({pathname:'/other/circledetails/'+contentId})
     }
-
+    handleDish=(contentId)=>()=>{
+        this.props.history.push({pathname:'/other/dishDetails/'+contentId})
+    }
     render() {
-        console.log(this.props);
+        console.log(this.props.userList);
         return (
             <ContentWrap>
                 {this.props.userList.map(value => <div key={value.contentId}  className="Contentlist">
@@ -17,7 +19,7 @@ class Content extends Component {
                         <div className="userName">{value.clientName}</div>
                         <div className="userTime"><span>1分钟前</span><span>Hello kitty 奶油生日蛋糕(6寸)</span> </div>
                     </div>
-                    <div className="content">
+                    <div className="content" onClick={this.handleDish(value.contentId)}>
                         <div className="contentText">{value.communityName}{value.introduce}</div>
                         <div className="imgList">
                             {value.image.length===1&&
