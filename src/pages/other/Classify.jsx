@@ -26,6 +26,11 @@ class Classify extends Component {
             rightHeader:this.state.leftList[e].list,
         })
     }
+    handleDeli=(name)=>()=>{
+        this.props.history.push(`search/recipe/`+name);
+        // console.log(name);
+        
+    }
     //推荐
     hindleClick2(e) {
         this.setState({
@@ -80,7 +85,10 @@ class Classify extends Component {
                                 </div>
                                 <div className="right_list">
                                 {(this.state.cl==="-1"?this.state.classifys:value.list).map((value1,index1) => 
-                                    <div key={value1.modifyTime+index1+value1+3} className="right_con">
+                                    <div key={value1.modifyTime+index1+value1+3}
+                                    className="right_con"
+                                    onClick={this.handleDeli(value1.name)}
+                                    >
                                         <div className="img">
                                             <img src={value1.image} alt="" />
                                         </div>

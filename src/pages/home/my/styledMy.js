@@ -44,6 +44,7 @@ margin: 0 auto;
                 position: relative;
                 .username{
                     max-width: 46%;
+                    min-width: 176px;
                     height: 28px;
                     line-height: 28px;
                     vertical-align: middle;

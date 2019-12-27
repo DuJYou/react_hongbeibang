@@ -13,6 +13,16 @@ import CircleDetails from './details/CircleDetails'
 import LessonSeries from './LessonSeries'
 import { IndexWarp } from './styledOther'
 class Other extends Component {
+    componentWillMount () {
+        // loading 动画 的结束 控制 模块
+        let loading = document.getElementById('i-loading')
+        if (loading) {
+          loading.setAttribute('class', 'i-loading-out')
+          setTimeout(() => {
+            loading.style.display = 'none'
+          }, 3000)
+        }
+      }
     render() {
         return (
             <IndexWarp>

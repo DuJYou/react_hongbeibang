@@ -117,7 +117,62 @@ background: #FFFFFF;
         color: #4A4945;
     }
 }
+`
 
+export const UniveWarp = styled.div `
+background: #FFFFFF;
+height: 100%;
+    display: flex;
+    flex-direction: column;
+.header{
+    height: 44px;
+    display:flex;
+    padding: 0 18px;
+    max-width: 600px;
+    box-sizing: border-box;
+    .img{
+        width: 27px;
+        height: 27px;
+        margin: 9.5px 0;
+        >img{
+            width:100%;
+            height:100%;
+        }
+    }
+    .search{
+        width:240px;
+        height: 35px;
+        margin: 4.5px 20px;
+    >input{
+        height: 100%;
+        margin: 0 auto;
+        border-radius: 4px;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        background-color: #F5F7F9;
+        padding: 5px 10px;
+        width: 100%;
+        line-height: 25px;
+        color: #4A4945;
+        font-size: 14px;
+        border: none;
+        outline: none;
+    }
+    }
+    .text{
+        margin: 7px 0;
+        font-size: 16px;
+        line-height: 30px;
+        color: #4A4945;
+    }
+}
+.main{
+    flex:1;
+        overflow-x: hidden;
+
+ 
+}
 `
 export const BaikeWarp = styled.div `
     overflow-x:hidden;
@@ -344,7 +399,15 @@ padding-bottom: 50px;
     width: 375px !important;
     height: 210px !important;
     object-fit: contain;
-    background: #000;
+    >video{
+        width: 100%;
+        height: 100%;
+    }
+    >img{
+        width: 100%;
+        height: 100%;
+    }
+    /* background: #000; */
 }
 .title{
     padding-top: 12px;
@@ -691,6 +754,279 @@ padding-bottom: 50px;
     }
 }
 `
+
+export const LessonWarp = styled.div `
+height:100%;
+padding: 0px;
+max-width: 600px;
+margin: 0 auto;
+overflow-x: hidden;
+padding-bottom: 50px;
+
+.video{
+    width: 375px !important;
+    height: 210px !important;
+    object-fit: contain;
+    >img{
+        width: 100%;
+        height: 100%;
+    }
+    /* background: #000; */
+}
+.title{
+    padding-top: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    background-color: #fff;
+    .title_text{
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 28px;
+        color: #313131;
+    }
+    .people{
+        margin-top: 15px;
+        .peole_img{
+            display:inline-block;
+            vertical-align: top;
+            width: 27px !important;
+            height: 27px !important;
+            >img{
+                width: 100%;
+                height: 100%;
+            }
+            
+        }
+        .text{
+                display:inline-block;
+                font-size: 13px;
+                line-height: 26.5px;
+                color: #313131;
+                >span{
+                    display:inline-block;
+                    color: #E98B71;
+                }
+            }
+    }
+}
+.list{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    background: #fff;
+    .lists{
+        margin-top: 10px;
+        background-color: #FFFFFF;
+        color: #676767;
+        font-size: 13px;
+        display: flex;
+        .list_tap{
+            .list_tap1{
+                display: flex;
+                align-items: center;
+                .list_d{
+                    align-items: center;
+                    justify-content: center;
+                    display: inline-flex;
+                    height: 3px;
+                    width: 3px;
+                    border-radius: 1.5px;
+                    background-color: #E98B71;
+                }
+                .list_z{
+                    color: #676767;
+                    font-weight: 200;
+                    font-size: 13px;
+                    margin-left: 5px;
+                    margin-right: 15px;
+                    line-height: 18.5px;
+                }
+            }
+           
+        }
+        .list_tap2{
+                margin-top: 5px;
+                display: flex;
+                align-items: center;
+                .list_d{
+                    align-items: center;
+                    justify-content: center;
+                    display: inline-flex;
+                    height: 3px;
+                    width: 3px;
+                    border-radius: 1.5px;
+                    background-color: #E98B71;
+                }
+                .list_z{
+                    color: #676767;
+                    font-weight: 200;
+                    font-size: 13px;
+                    margin-left: 5px;
+                    margin-right: 15px;
+                    line-height: 18.5px;
+                }
+            }
+        
+    
+    .next{
+            align-items: center;
+            display: flex;
+            justify-content: flex-end;
+            margin-left: 0px;
+            >img{
+                width: 6.75px;
+                height: 11.57px;
+            }
+        }
+    }
+}
+.text_mian{
+    .text_list{
+        padding: .20rem;
+        padding-right: .175rem;
+        .text_list_title{
+            font-weight: bold;
+            font-size: 17px;
+            line-height: .24rem;
+            color: #313131;
+            margin-bottom: .10rem;
+        }
+        .text_list_details{
+            p{
+                color: #313131;
+                text-indent: 0;
+                margin-top: 0;
+                margin-bottom: 10;
+                font-size: 16px;
+                line-height: 25.5px;
+                letter-spacing: 0.5px;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            img{
+                width: 337px;
+                height: 188px;
+            }
+        }
+    }
+    .teacher{
+        background-color: #fff;
+        padding: .20rem;
+        padding-right: .175rem;
+        .teacher_title{
+            font-weight: bold;
+            font-size: 17px;
+            line-height: .24rem;
+            color: #313131;
+            margin-bottom: .10rem;
+        }
+    }
+}
+.study{
+    padding: 20px;
+    padding-right: 17.5px;
+    .study_title{
+        width: 130px;
+        height: 57.2px;
+        background: none;
+        >img{
+            width: 100%;
+            height: 100%; 
+        }
+    }
+    .study_text{
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 22px;
+        color: #313131;
+    }
+    .study_imgs{
+        display: flex;
+        flex-direction: row;
+        margin-top: 15px;
+        .study_img{
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            cursor: pointer;
+            >div{
+                flex: 1;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                cursor: pointer;
+                >img{
+                    width: 50px;
+                height: 58px;
+                background: none;
+                }
+                >span{
+                    font-size: 12px;
+                    color: #313131;
+                }
+            }
+        }
+    }
+}
+.foot{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 375px !important;
+    height: 49px !important;
+    margin: 0 auto;
+    border-top: 1px solid;
+    border-top-color: #F5F7F9;
+    background-color: #fff;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    z-index: 1000;
+    .most{
+        width: 69.5px;
+        height: 100%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        >img{
+            width: 20.5px;
+            height: 19px;   
+        }
+        >span{
+            color: #313131;
+            font-size: 11px;
+            line-height: 15px;
+            position: relative;
+            top: 4px;
+        }
+    }
+    .price{
+        flex: 1;
+        background-color: #E98B71;
+        color: #fff;
+        font-size: 15px;
+        font-weight: bold;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        >div{
+            color: #fff;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    }
+}
+`
+
 
 export const CircleDetailsWarp = styled.div`
 height:100%;

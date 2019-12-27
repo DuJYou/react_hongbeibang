@@ -5,16 +5,16 @@ import { get } from 'utils/http'
 class Quintessence extends Component {
     state = {
         QuintessenceList: [],
-        pageIndex:'0',
+        pageIndex: '0',
         switch: false
     }
     async componentDidMount() {
         let result = await get({
             url: '/api/question/getEssence',
-            params:{
-                _t:'1576508351928',
-                pageIndex:'0',
-                pageSize:'10'
+            params: {
+                _t: '1576508351928',
+                pageIndex: '0',
+                pageSize: '10'
             }
         })
         console.log(result.data.content.data);
@@ -22,32 +22,32 @@ class Quintessence extends Component {
             QuintessenceList: result.data.content.data,
             switch: true
         })
-          //上拉加载数据
-          let wrapper = document.querySelector('.main')
-          let bScroll = new BScroll(wrapper, {
-              scrollY: true,
-              pullUpLoad: true,
-              click: true,
-          })
-          bScroll.on('pullingUp', async () => {
-              this.state.pageIndex = this.state.pageIndex + 10
-              let result = await get({
+        //上拉加载数据
+        let wrapper = document.querySelector('.main')
+        let bScroll = new BScroll(wrapper, {
+            scrollY: true,
+            pullUpLoad: true,
+            click: true,
+        })
+        bScroll.on('pullingUp', async () => {
+            this.state.pageIndex = this.state.pageIndex + 10
+            let result = await get({
                 url: '/api/question/getEssence',
-                params:{
-                    _t:'1576508351928',
-                    pageIndex:'0',
-                    pageSize:'10'
+                params: {
+                    _t: '1576508351928',
+                    pageIndex: '0',
+                    pageSize: '10'
                 }
             })
-              bScroll.refresh()
-              this.setState({
+            bScroll.refresh()
+            this.setState({
                 QuintessenceList: [
-                      ...this.state.QuintessenceList,
-                      ... result.data.content.data
-                  ]
-              })
-              bScroll.finishPullUp()
-          })
+                    ...this.state.QuintessenceList,
+                    ...result.data.content.data
+                ]
+            })
+            bScroll.finishPullUp()
+        })
     }
     render() {
         return (

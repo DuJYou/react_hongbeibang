@@ -11,12 +11,12 @@ class My extends Component {
                     <div className="user">
                         <div className="userinfo">
                             <div className="img">
-                                <img src="https://image.hongbeibang.com/Fl19YWQjjSGvWoRxXCMLzNM3FxBT?132X132&imageView2/1/w/132/h/132" alt="" />
+                                <img src="" alt="" />
                             </div>
                             <div className="userlist">
-                                <div className="username">是明宇啊</div>
-                                <div className="ID">ID：kw3w20191214173550355</div>
-                                <div className="experience">经验值:0/100</div>
+                                <div className="username">请登录</div>
+                                <div className="ID">ID：请登录</div>
+                                <div className="experience">经验值:0</div>
                                 <div className="more"><img src="https://image.hongbeibang.com/Fr2noR6eeftUXEWQp5xx3DZjUj16?94X94&imageView2/1/w/46/h/46" alt="" /></div>
                             </div>
                         </div>

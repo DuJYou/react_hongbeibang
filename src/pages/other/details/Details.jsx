@@ -3,6 +3,8 @@ import { DetailsWarp } from '../styledOther'
 import Swiper from '@/swiper/SwiperDet'
 import { get } from 'utils/http'
 import {withRouter} from 'react-router-dom'
+import { Player,BigPlayButton } from 'video-react';
+import "video-react/dist/video-react.css";
 class Details extends Component {
     state={
         detailsList:[],
@@ -56,11 +58,23 @@ class Details extends Component {
     }
 
     render() {
-        // console.log(this.state.detailsList.introduces);
+        console.log(this.state.detailsList.image);
         
         return (
             <DetailsWarp>
-                <div className="video"></div>
+
+                {/* <div className="video"> */}
+                    <Player 
+                    ref="player"
+                    videoId="video-1"
+                    playsInline
+                    poster={this.state.detailsList.image}
+                    src={this.state.detailsList.playURL}
+                    >
+                        <BigPlayButton position="center" />
+                    </Player>
+                {/* </div> */}
+                {/* <div className="video"><video className="video-js"  src={this.state.detailsList.playURL}></video></div> */}
                 <div className="title">
                     <div className="title_text">{this.state.detailsList.shareTitle}</div>
                     <div className="people"><span className="peole_img"><img src="https://image.hongbeibang.com/FgRQxfAWq4kOdLc5xd_GxWm03Vs_?54X54&imageView2/1/w/54/h/54" alt="" /></span><span className="text"><span>1000+</span> 人在学</span></div>

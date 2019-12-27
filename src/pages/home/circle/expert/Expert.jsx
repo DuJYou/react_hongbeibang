@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ExpertWrap } from './styledExpert'
 import BScroll from 'better-scroll'
 import { get } from 'utils/http'
+import {withRouter} from 'react-router-dom'
 class expert extends Component {
     state = {
         expertList: [],
@@ -11,6 +12,9 @@ class expert extends Component {
       //点击进入下面的教学详情
       handleDetail=(contentId)=>()=>{
         this.props.history.push({pathname:'/other/circledetails/'+contentId})
+    }
+    handleDish=(contentId)=>()=>{
+        this.props.history.push({pathname:'/other/dishDetails/'+contentId})
     }
 
     async componentDidMount() {
@@ -70,7 +74,7 @@ class expert extends Component {
                         <div className="userName">{value.clientName}</div>
                         <div className="userTime"><span>1分钟前</span><span>Hello kitty 奶油生日蛋糕(6寸)</span> </div>
                     </div>
-                    <div className="content">
+                    <div className="content" onClick={this.handleDish(value.contentId)}>
                         <div className="contentText">{value.communityName}{value.introduce}</div>
                         <div className="imgList">
 
@@ -115,4 +119,4 @@ class expert extends Component {
     }
 }
 
-export default expert;
+export default withRouter(expert);
